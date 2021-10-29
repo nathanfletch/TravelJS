@@ -5,43 +5,50 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kavoon&family=Abril+Fatface&display=swap" rel="stylesheet">
-  <title>City Tour</title>
+  <title>Travel API Practice</title>
 </head>
 
 <body>
   <div id="container" class="py-4 container">
     <div class="jumbotron jumbotron-fluid">
+      <!-- Landing page div -->
       <h1>Destination Reviews</h1>
       <p>I dare you to click this button</p>
+      <button id="get-destinations">Get Destinations</button>
+      <button id="create-destination">Add a Destination</button>
     </div>
-    <div id="flex-container">
-      
+    
+    <div id="display" >
+      <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      <div>
+        <canvas id="destinationChart"></canvas>
+      </div>
+    </div>
+
+    <div id="create-div" class="hidden">
+      <form action="submit" id="create-form">
+        <label for="username">Username</label>
+        <input type="text" id="username">
+
+        <label for="country">Country</label>
+        <input type="text" id="country">
+
+        <label for="city">City</label>
+        <input type="text" id="city">
+
+        <label for="rating" >Rating</label>
+        <input type="number" id="rating">
+
+        <label for="review">Review</label>
+        <input type="text" id="review">
+
+        <button type="submit" id="create-form" class="btn btn-default">Submit</button>
+      </form>
     </div>
   </div>
 
-  <nav id="navBar" class="hidden navbar">
-    
-    <div>
-      <ul class="p-2 navbar-nav d-flex flex-row">
-        <li class="nav-link mr-auto p-2" id="reset-button">Pick a new mood</li>
-        <div id="right" class="ml-auto d-flex flex-row">
-          <li class="nav-item pe-2">
-            <a class="nav-link" href="#cityDisplay">Tour</a>
-          </li>
-          <li class="nav-item pe-2">
-            <a class="nav-link" href="#map-wrapper">Map</a>
-          </li>
-          <li class="nav-item pe-2">
-            <a class="nav-link" href="#outdoors-search">Outdoors</a>
-          </li>
-          <li class="nav-item pe-2">
-            <a class="nav-link" href="#movies">Movies</a>
-          </li>
-        </div>
-      </ul>
-    </div>
-  </nav>
-  <button id="get-destinations">Get Destinations</button>
 </body>
 
 </html>
